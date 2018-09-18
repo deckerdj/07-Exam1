@@ -102,7 +102,8 @@ def problem3(point, length, delta, window):
     # TODO (continued):         and colors per the specified pattern.
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
-
+    problem3()
+    
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
