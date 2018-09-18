@@ -2,8 +2,8 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Daniel Decker.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -20,7 +20,7 @@ def main():
 def problem2a_testing():
     """ Tests the   sum_of_digits_of_sum_of_factors   function. """
     ############################################################################
-    #  TODO: 2. Implement this TEST function.  See the IMPORTANT NOTE below.
+    #  Done: 2. Implement this TEST function.  See the IMPORTANT NOTE below.
     #     This problem TESTS the    sum_of_digits_of_sum_of_factors    function
     #     that is defined below.  Include at least **   4   ** tests.
     #     Use the usual format:
@@ -44,6 +44,30 @@ def problem2a_testing():
     print('---------------------------------------------------------')
     print('Testing the   sum_of_digits_of_sum_of_factors   function:')
     print('---------------------------------------------------------')
+
+    # Test 1
+    expected = 56
+    answer = sum_of_digits_of_sum_of_factors(28)
+    print('Test 1 expected:', expected)
+    print('         actual:', answer)
+
+    # Test 2
+    expected = 5
+    answer = sum_of_digits_of_sum_of_factors(13)
+    print('Test 2 expected:', expected)
+    print('         actual:', answer)
+
+    # Test 3
+    expected = 8
+    answer = sum_of_digits_of_sum_of_factors(20)
+    print('Test 3 expected:', expected)
+    print('         actual:', answer)
+
+    # Test 4
+    expected = 6
+    answer = sum_of_digits_of_sum_of_factors(24)
+    print('Test 4 expected:', expected)
+    print('         actual:', answer)
 
 
 def sum_of_digits_of_sum_of_factors(n):
@@ -70,7 +94,7 @@ def sum_of_digits_of_sum_of_factors(n):
 
 
 ################################################################################
-# TODO: 3.  READ the green doc-string for the   number_of_factors   function
+# Done: 3.  READ the green doc-string for the   number_of_factors   function
 #    defined below.  You do NOT need to understand its implementation,
 #    just its specification (per the doc-string).
 #    You should  ** CALL **  that function as needed in implementing
@@ -310,7 +334,7 @@ def problem2b(a, b, x):
          and the sum   16 + 18 + 20 + 24   is 78.
      """
     ############################################################################
-    # TODO: 4. Implement and test this function.  See the IMPORTANT NOTE below!
+    # Done: 4. Implement and test this function.  See the IMPORTANT NOTE below!
     #          Tests have been written for you (above).
     ############################################################################
     # TODO (continued): IMPORTANT NOTE:
@@ -319,9 +343,13 @@ def problem2b(a, b, x):
     #                         that is DEFINED ABOVE.
     ############################################################################
 
+    total = 0
+    for k in range(b - a + 1):
+        total = total + (number_of_factors(k + b - a)) >= x
+    return total
 
-def run_test_problem2c():
-    """ Tests the   problem2c   function. """
+    def run_test_problem2c():
+        """ Tests the   problem2c   function. """
     print()
     print('--------------------------------------------------')
     print('Testing the   problem2c   function:')
@@ -366,7 +394,7 @@ def run_test_problem2c():
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 6:
-    expected = 420   # from 101 to 109: 311 + 109 = 420
+    expected = 420  # from 101 to 109: 311 + 109 = 420
     print_expected_result_of_test([100], expected, test_results,
                                   format_string)
     actual = problem1c(100)
@@ -442,6 +470,7 @@ def problem1c(m):
     # TODO (continued)    You get   NO credit   if your solution is more
     # TODO (continued)    than 3 lines of code (and it can be done in 1 line).
     ############################################################################
+
 
 
 ################################################################################
